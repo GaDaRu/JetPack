@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.jetpack.menuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_webFragment"
+            app:destination="@id/webFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_camFragment"
+            app:destination="@id/camFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_calFragment"
+            app:destination="@id/calFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/webFragment"
+        android:name="com.example.jetpack.WebFragment"
+        android:label="fragment_web"
+        tools:layout="@layout/fragment_web" />
+    <fragment
+        android:id="@+id/camFragment"
+        android:name="com.example.jetpack.camFragment"
+        android:label="fragment_cam"
+        tools:layout="@layout/fragment_cam" />
+    <fragment
+        android:id="@+id/calFragment"
+        android:name="com.example.jetpack.calFragment"
+        android:label="fragment_cal"
+        tools:layout="@layout/fragment_cal" >
+        <action
+            android:id="@+id/action_calFragment_to_sumFragment"
+            app:destination="@id/sumFragment" />
+        <action
+            android:id="@+id/action_calFragment_to_resFragment"
+            app:destination="@id/resFragment" />
+        <action
+            android:id="@+id/action_calFragment_to_divFragment"
+            app:destination="@id/divFragment" />
+        <action
+            android:id="@+id/action_calFragment_to_mulFragment"
+            app:destination="@id/mulFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sumFragment"
+        android:name="com.example.jetpack.sumFragment"
+        android:label="fragment_sum"
+        tools:layout="@layout/fragment_sum" />
+    <fragment
+        android:id="@+id/resFragment"
+        android:name="com.example.jetpack.resFragment"
+        android:label="fragment_res"
+        tools:layout="@layout/fragment_res" />
+    <fragment
+        android:id="@+id/divFragment"
+        android:name="com.example.jetpack.divFragment"
+        android:label="fragment_div"
+        tools:layout="@layout/fragment_div" />
+    <fragment
+        android:id="@+id/mulFragment"
+        android:name="com.example.jetpack.mulFragment"
+        android:label="fragment_mul"
+        tools:layout="@layout/fragment_mul" />
+</navigation>
